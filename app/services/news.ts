@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { INew } from "../interfaces/INew";
 
-const API_URL = "http://eventregistry.org/api/v1/article/getArticles";
+const API_URL = "https://eventregistry.org/api/v1/article/getArticles";
 
 export const getNews = async (): Promise<INew[]> => {
   const response = await axios.get(API_URL, {
@@ -10,7 +10,7 @@ export const getNews = async (): Promise<INew[]> => {
       apiKey: "359d01b5-8cd8-4d10-9dd5-a147bc330756",
       lang: "spa",
       articlesCount: 20,
-      sourceLocationUri: "http://en.wikipedia.org/wiki/Argentina",
+      sourceLocationUri: "https://en.wikipedia.org/wiki/Argentina",
     },
   });
 
