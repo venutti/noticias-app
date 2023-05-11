@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
+import type { LayoutProps } from "@/.next/types/app/layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,11 +10,6 @@ export const metadata = {
   description: "Sitio de noticias",
   image: "/logo.png",
 };
-
-interface LayoutProps {
-  children: React.ReactNode;
-  types: React.ReactNode;
-}
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
